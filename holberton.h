@@ -29,6 +29,7 @@ void printChar(va_list va);
 void printString(va_list va);
 void printInt(va_list va);
 void printDec(va_list va);
+int funper(char *format, int i, va_list toPrint);
 void funback(char *format, int i);
 void printCR(void);
 void printNewline(void);
