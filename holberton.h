@@ -31,9 +31,9 @@ void printInt(va_list va);
 void printDec(va_list va);
 void funback(char *format, int i);
 void printCR(void);
-
-
-
-
-
+void printNewline(void);
+void printFormFeed(void);
+void printAudibleAlert(void);
+void printBS(void);
+void printVT(void);
 #endif
