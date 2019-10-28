@@ -7,7 +7,7 @@
   */
 int _printf(const char *format, ...)
 {
-	int i = 0, k = 0, res = 0;
+	int i = 0, res = 0;
 	va_list toPrint;
 
 	va_start(toPrint, format);
@@ -15,16 +15,16 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			res = funper(*format, i, toPrint);
+			res = funper(format, i, toPrint);
 			i += res;
 			continue;
 
 		}
 		else
 		{
-			 _putchar(format[i];
+			 _putchar(format[i]);
 		}
 		i++;
 	}
-
+return (i);
 }

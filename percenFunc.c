@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdarg.h>
 
-int funper(char *format, int i, va_list toPrint)
+int funper(const char *format, int i, va_list toPrint)
 {
 	int c =0;
 	tpPer relFormatFun[] = {

@@ -39,6 +39,8 @@ void printString(va_list va)
 void printInt(va_list va)
 {
 
+	int c = va_arg(va, int);
+	_putchar(c);
 }
 
 /**
@@ -50,4 +52,6 @@ void printInt(va_list va)
 void printDec(va_list va)
 {
 
+	int c = va_arg(va, int);
+	_putchar(c);
 }
