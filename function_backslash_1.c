@@ -7,7 +7,7 @@
   */
 void printBS(void)
 {
-	_putchar(8);
+	_putchar('\b');
 }
 
 /**
@@ -18,7 +18,7 @@ void printBS(void)
   */
 void printCR(void)
 {
-	_putchar(13);
+	_putchar('\r');
 }
 
 /**
@@ -29,6 +29,50 @@ void printCR(void)
   */
 void printVT(void)
 {
-	_putchar(11);
+	_putchar('\v');
+}
+
+/**
+  *  - prints vertical tab
+  *
+  *
+  *
+  */
+void printNewline(void)
+{
+	_putchar('\n');
+}
+
+/**
+  * printVT - prints vertical tab
+  *
+  *
+  *
+  */
+void printFormFeed(void)
+{
+	_putchar('\f');
+}
+
+/**
+  * printVT - prints vertical tab
+  *
+  *
+  *
+  */
+void printTab(void)
+{
+	_putchar('\t');
+}
+
+/**
+  * printVT - prints vertical tab
+  *
+  *
+  *
+  */
+void printAudibleAlert(void)
+{
+	_putchar('\a');
 }
 
