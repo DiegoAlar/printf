@@ -36,4 +36,5 @@ void printFormFeed(void);
 void printAudibleAlert(void);
 void printBS(void);
 void printVT(void);
+void printTab(void);
 #endif
