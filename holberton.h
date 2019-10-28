@@ -22,7 +22,7 @@ typedef struct tpesPer
 typedef struct tpesB
 {
 	char c;
-	void (*f)(va_list);
+	void (*f)();
 
 } tpB;
 void printChar(va_list va);
