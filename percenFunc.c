@@ -8,7 +8,7 @@
  * @pun: pointer to len in _printf;
  * Return: inreger 1 or 2 or 0.
  */
-int funper(const char *format, int i, va_list toPrint, int *pun)
+int funper(const char *format, int i, va_list toPrint, int *pun, int *sub)
 {
 	int c = 0;
 
@@ -22,10 +22,10 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 	if (format[i + 1] == '%')
 	{
 		_putchar('%');
-		/* *pun -= 1; */
+		*sub += 1;
 		return (2);
 	}
-	while (c < 4)
+	while (c < 2)
 	{
 		if (relFormatFun[c].t == format[i + 1])
 		{
@@ -36,7 +36,7 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 	}
 	if (format[i + 1] == ' ')
 	{
-		return (1 + funper(format, i + 1, toPrint, pun));
+		return (1 + funper(format, i + 1, toPrint, pun, sub));
 	}
 	else if (format[i + 1] != '\0')
 	{
