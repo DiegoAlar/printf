@@ -20,6 +20,6 @@ void printChar(va_list va, int *p);
 void printString(va_list va, int *p);
 void printInt(va_list va, int *p);
 void printDec(va_list va, int *p);
-int funper(const char *format, int i, va_list toPrint, int *pun);
+int funper(const char *format, int i, va_list toPrint, int *pun, int *sub);
 void funback(char *format, int i);
 #endif
