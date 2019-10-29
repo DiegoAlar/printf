@@ -3,20 +3,20 @@
 /**
   * printChar - it prints a single char
   * @p: pointer to len in _printf;
-  *
+  * @va: this is a varg argument
   *
   */
 void printChar(va_list va, int *p)
 {
-	char c = (char) va_arg(va, int);
+  char c = (char) va_arg(va, int);
   *p += 1;
-	_putchar(c);
+  _putchar(c);
 }
 
 /**
   * printString - function that prints a string
   * @p: pointer to len in _printf;
-  *
+  * @va: varg argument
   *
   */
 void printString(va_list va, int *p)
@@ -35,7 +35,7 @@ void printString(va_list va, int *p)
 /**
   * printInt - function that prints an integer
   * @p: pointer to len in _printf;
-  *
+  * @va: varg argument
   *
   */
 void printInt(va_list va, int *p)
@@ -49,7 +49,7 @@ void printInt(va_list va, int *p)
 /**
   * printDec - function that prints a decimal number
   * @p: pointer to len in _printf;
-  *
+  * @va: argument
   *
   */
 void printDec(va_list va, int *p)
