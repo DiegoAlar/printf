@@ -33,11 +33,15 @@ void printString(va_list va, int *p)
       k++;
     }
   }
-	while (st[i])
-	{
-		_putchar(st[i]);
-		i++;
-	}
+  else 
+  {
+    while (st[i])
+	  {
+		  _putchar(st[i]);
+		  i++;
+	  }
+  }
+	
   *p += (i - 1);
 }
 
