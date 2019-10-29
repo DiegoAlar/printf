@@ -19,11 +19,6 @@ int funper(const char *format, int i, va_list toPrint)
 		{'d', printDec		},
 	};
 	
-	if (format[i + 1] == '%')
-	{
-		_putchar('%');
-		return (2);
-	}
 	while (c < 4)
 	{
 		if (relFormatFun[c].t == format[i + 1])
