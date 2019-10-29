@@ -9,7 +9,7 @@
 void printChar(va_list va, int *p)
 {
   char c = (char) va_arg(va, int);
-  *p += 1;
+  *p += 0;
   _putchar(c);
 }
 
@@ -22,8 +22,17 @@ void printChar(va_list va, int *p)
 void printString(va_list va, int *p)
 {
 	char *st = va_arg(va, char*);
-	int i = 0;
+  char nu[] = "(null)";
+  int i = 0, k = 0;
 
+  if (st == NULL)
+  {
+    while (nu[k])
+    {
+      _putchar(nu[k]);
+      k++;
+    }
+  }
 	while (st[i])
 	{
 		_putchar(st[i]);
