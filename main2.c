@@ -12,7 +12,7 @@ int main(void)
 	/*_printf("%s   \n");
 	_printf("%          s", "Holaaa!");
 	_printf("%"); */
-	_printf("%%%");
+	_printf("%%%%");
 	/*_printf(NULL);
 	*/
 	return (0);

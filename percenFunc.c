@@ -19,7 +19,7 @@ int funper(const char *format, int i, va_list toPrint)
 		{'d', printDec		},
 	};
 	
-	if (format[i + 1])
+	if (format[i + 1] == '%')
 	{
 		_putchar('%');
 		return (2);
