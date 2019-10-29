@@ -6,9 +6,10 @@
  * @format: format to print
  * @i: integer
  * @toPrint: list to print.
+ * @pun: pointer to len in _printf;
  * Return: inreger 1 or 2 or 0.
  */
-int funper(const char *format, int i, va_list toPrint)
+int funper(const char *format, int i, va_list toPrint, int *pun)
 {
 	int c = 0;
 
@@ -18,7 +19,7 @@ int funper(const char *format, int i, va_list toPrint)
 		{'i', printInt		},
 		{'d', printDec		},
 	};
-	
+
 	if (format[i + 1] == '%')
 	{
 		_putchar('%');
@@ -28,14 +29,14 @@ int funper(const char *format, int i, va_list toPrint)
 	{
 		if (relFormatFun[c].t == format[i + 1])
 		{
-			relFormatFun[c].f(toPrint);
+			relFormatFun[c].f(toPrint, pun);
 			return (2);
 		}
 		c++;
 	}
 	if (format[i + 1] == ' ')
 	{
-		return (funper(format, i + 1, toPrint));
+		return (funper(format, i + 1, toPrint, pun));
 	}
 	else if (format[i + 1] != '\0')
 	{
