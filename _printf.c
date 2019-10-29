@@ -18,10 +18,6 @@ int _printf(const char *format, ...)
 			res = funper(format, i, toPrint);
 			if (!res)
 			{
-				_putchar('E');
-				_putchar('E');
-				_putchar('E');
-				_putchar('E');
 				return (-1);
 			}
 			i += res;
