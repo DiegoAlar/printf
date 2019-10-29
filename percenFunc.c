@@ -22,6 +22,7 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 	if (format[i + 1] == '%')
 	{
 		_putchar('%');
+		/* *pun -= 1; */
 		return (2);
 	}
 	while (c < 4)
@@ -35,12 +36,12 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 	}
 	if (format[i + 1] == ' ')
 	{
-		return (funper(format, i + 1, toPrint, pun));
+		return (1 + funper(format, i + 1, toPrint, pun));
 	}
 	else if (format[i + 1] != '\0')
 	{
-		_putchar('%');
-		return (1);
+		_putchar(format[i + 1]);
+		return (2);
 	}
 	else
 	{
