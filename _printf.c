@@ -7,17 +7,20 @@
   */
 int _printf(const char *format, ...)
 {
-	int i = 0, res = 0;
+	int i = 0, res = 0, len = 0;
+	int *ptr;
 	va_list toPrint;
 
+	ptr = &len;
 	va_start(toPrint, format);
 	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
-			res = funper(format, i, toPrint);
+			res = funper(format, i, toPrint, ptr);
 			if (!res)
 			{
+				va_end(toPrint);
 				return (-1);
 			}
 			i += res;
@@ -30,5 +33,6 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-return (i);
+	va_end(toPrint);
+	return ((i - 1) + len);
 }

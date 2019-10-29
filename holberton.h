@@ -11,7 +11,7 @@ void _putchar(char c);
 typedef struct tpesPer
 {
 	char t;
-	void (*f)(va_list);
+	void (*f)(va_list, int *);
 } tpPer;
 
 /**
@@ -26,11 +26,11 @@ typedef struct tpesB
 
 } tpB;
 int _printf(const char *format, ...);
-void printChar(va_list va);
-void printString(va_list va);
-void printInt(va_list va);
-void printDec(va_list va);
-int funper(const char *format, int i, va_list toPrint);
+void printChar(va_list va, int *p);
+void printString(va_list va, int *p);
+void printInt(va_list va, int *p);
+void printDec(va_list va, int *p);
+int funper(const char *format, int i, va_list toPrint, int *pun);
 void funback(char *format, int i);
 void printCR(void);
 void printNewline(void);
