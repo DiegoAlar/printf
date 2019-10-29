@@ -3,7 +3,7 @@
   * _printf - it prints chars and a string
   * @format: char with string formats to be printed
   *
-  *
+  * Return: -1 when error or the count of chars
   */
 int _printf(const char *format, ...)
 {
@@ -16,6 +16,14 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			res = funper(format, i, toPrint);
+			if (!res)
+			{
+				_putchar('E');
+				_putchar('E');
+				_putchar('E');
+				_putchar('E');
+				return (-1);
+			}
 			i += res;
 			continue;
 

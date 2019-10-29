@@ -4,10 +4,10 @@
 void _putchar(char c);
 
 /**
-    * struct tpesPer - structure for percentage formats
-      * @t: a format for percentage
-        * @f: function
-	  */
+* struct tpesPer - structure for percentage formats
+* @t: a format for percentage
+* @f: function
+*/
 typedef struct tpesPer
 {
 	char t;
@@ -15,10 +15,10 @@ typedef struct tpesPer
 } tpPer;
 
 /**
-    * struct tpesB - structure for backlash formats
-      * @t: a format for backslash
-        * @f: function
-	  */
+* struct tpesB - structure for backlash formats
+* @c: a format for backslash
+* @f: function
+*/
 typedef struct tpesB
 {
 	char c;
