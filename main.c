@@ -30,7 +30,8 @@ int main(void)
 
 	addr = (void *)0x7ffe637541f0;
 
-
+	_printf("m%\n");
+	_printf("%\n");
 	_printf("Length:[%d, %i]\n", len, len);
 
 	printf("Length:[%d, %i]\n", len2, len2);
@@ -77,7 +78,7 @@ int main(void)
 	_printf("Unknown:[%r]\n");
 
 
-
+	printf("Unknown:[%r]\n");
 
 	return (0);
 }
