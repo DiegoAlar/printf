@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdarg.h>
 
 /**
  * funper - print whit a format in format[i]
@@ -17,14 +16,14 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 		{'c', printChar		},
 		{'s', printString	},
 		{'i', printInt		},
-		{'d', printDec		},
+		{'d', printDec		}
 	};
 
-	/*if (format[i + 1] == '%')
+	if (format[i + 1] == '%')
 	{
 		_putchar('%');
 		return (2);
-	}*/
+	}
 	while (c < 4)
 	{
 		if (relFormatFun[c].t == format[i + 1])
