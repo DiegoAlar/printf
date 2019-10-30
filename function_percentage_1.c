@@ -8,9 +8,9 @@
   */
 void printChar(va_list va, int *p)
 {
-  char c = (char) va_arg(va, int);
-  /**p += 0;*/
-  _putchar(c, p);
+	char c = (char) va_arg(va, int);
+
+	_putchar(c, p);
 }
 
 /**
@@ -22,35 +22,33 @@ void printChar(va_list va, int *p)
 void printString(va_list va, int *p)
 {
 	char *st = va_arg(va, char*);
-  char nu[] = "(null)";
-  int i = 0, k = 0;
+	char nu[] = "(null)";
+	int i = 0, k = 0;
 
-  if (st == NULL)
-  {
-    while (nu[k])
-    {
-      _putchar(nu[k], p);
-      k++;
-    }
-  }
-  else
-  {
-    while (st[i])
-	  {
-		  _putchar(st[i], p);
-		  i++;
-	  }
-  }
-
-  /**p += (i - 1);*/
+	if (st == NULL)
+	{
+		while (nu[k])
+		{
+			_putchar(nu[k], p);
+			k++;
+		}
+	}
+	else
+	{
+		while (st[i])
+		{
+			_putchar(st[i], p);
+			i++;
+		}
+	}
 }
 
 /**
-  * printInt - function that prints an integer
-  * @p: pointer to len in _printf;
-  * @va: varg argument
-  *
-  */
+ * printInt - function that prints an integer
+ * @p: pointer to len in _printf;
+ * @va: varg argument
+ *
+ */
 void printInt(va_list va, int *p)
 {
 	int r;
@@ -58,15 +56,17 @@ void printInt(va_list va, int *p)
 
 	r = print_Number(c, p);
 	p += r;
-	/**p += r;*/
 }
 
+
+
+
 /**
-  * printDec - function that prints a decimal number
-  * @p: pointer to len in _printf;
-  * @va: argument
-  *
-  */
+ * printDec - function that prints a decimal number
+ * @p: pointer to len in _printf;
+ * @va: argument
+ *
+ */
 void printDec(va_list va, int *p)
 {
 	int r;
@@ -74,5 +74,10 @@ void printDec(va_list va, int *p)
 
 	r = print_Number(c, p);
 	p += r;
-	/**p += r;*/
 }
+
+
+
+
+
+
