@@ -33,7 +33,7 @@ void printString(va_list va, int *p)
       k++;
     }
   }
-  else 
+  else
   {
     while (st[i])
 	  {
@@ -41,7 +41,7 @@ void printString(va_list va, int *p)
 		  i++;
 	  }
   }
-	
+
   *p += (i - 1);
 }
 
@@ -53,10 +53,11 @@ void printString(va_list va, int *p)
   */
 void printInt(va_list va, int *p)
 {
-
+	int r = 0;
 	int c = va_arg(va, int);
-	_putchar(c);
-  *p = 1;
+
+	r = print_Number(c);
+	*p += r;
 }
 
 /**
@@ -67,8 +68,9 @@ void printInt(va_list va, int *p)
   */
 void printDec(va_list va, int *p)
 {
-
+	int r = 0;
 	int c = va_arg(va, int);
-	_putchar(c);
-  *p = 1;
+
+	r = print_Number(c);
+	*p += r;
 }
