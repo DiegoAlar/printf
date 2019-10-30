@@ -2,7 +2,7 @@
 #define HOLBERTON_H
 #include <stdarg.h>
 #include <stdlib.h>
-void _putchar(char c);
+int *_putchar(char c, int *p);
 
 /**
 * struct tpesPer - structure for percentage formats
@@ -20,7 +20,6 @@ void printChar(va_list va, int *p);
 void printString(va_list va, int *p);
 void printInt(va_list va, int *p);
 void printDec(va_list va, int *p);
-int funper(const char *format, int i, va_list toPrint, int *pun, int *sub);
-void funback(char *format, int i);
-int print_Number(int n);
+int funper(const char *format, int i, va_list toPrint, int *pun);
+int print_Number(int n, int *p);
 #endif

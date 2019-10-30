@@ -7,9 +7,8 @@
   */
 int _printf(const char *format, ...)
 {
-	int i = 0, k = 0, res = 0, len = 0;
+	int i = 0, res = 0, len = 0;
 	int *ptr;
-	int *subs;
 	va_list toPrint;
 
 	if (format == NULL)
@@ -17,18 +16,17 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 	ptr = &len;
-	subs = &k;
 	va_start(toPrint, format);
 
 	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
-			res = funper(format, i, toPrint, ptr, subs);
+			res = funper(format, i, toPrint, ptr);
 			if (!res)
 			{
 				va_end(toPrint);
-				return (i);
+				return (len);
 			}
 			i += res;
 			continue;
@@ -36,13 +34,13 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			 _putchar(format[i]);/*entra con 2 %%*/
+			 _putchar(format[i], ptr);/*entra con 2 %%*/
 		}
 		i++;
 	}
 	/*k = ((k / 2) - 1);*/
 	va_end(toPrint);
-	/*condicional*/
+	/*
 	if (k > 2)
 	{
 		if (k % 2 != 0)
@@ -53,5 +51,6 @@ int _printf(const char *format, ...)
 		return ((i - 1) + len - k);
 
 	}
-	return ((i - 1) + len);
+	return ((i - 1) + len);*/
+	return (len);
 }
