@@ -9,8 +9,8 @@
 void printChar(va_list va, int *p)
 {
   char c = (char) va_arg(va, int);
-  *p += 0;
-  _putchar(c);
+  /**p += 0;*/
+  _putchar(c, p);
 }
 
 /**
@@ -29,7 +29,7 @@ void printString(va_list va, int *p)
   {
     while (nu[k])
     {
-      _putchar(nu[k]);
+      _putchar(nu[k], p);
       k++;
     }
   }
@@ -37,12 +37,12 @@ void printString(va_list va, int *p)
   {
     while (st[i])
 	  {
-		  _putchar(st[i]);
+		  _putchar(st[i], p);
 		  i++;
 	  }
   }
 
-  *p += (i - 1);
+  /**p += (i - 1);*/
 }
 
 /**
@@ -53,11 +53,12 @@ void printString(va_list va, int *p)
   */
 void printInt(va_list va, int *p)
 {
-	int r = 0;
+	int r;
 	int c = va_arg(va, int);
 
-	r = print_Number(c);
-	*p += r;
+	r = print_Number(c, p);
+	p += r;
+	/**p += r;*/
 }
 
 /**
@@ -68,9 +69,10 @@ void printInt(va_list va, int *p)
   */
 void printDec(va_list va, int *p)
 {
-	int r = 0;
+	int r;
 	int c = va_arg(va, int);
 
-	r = print_Number(c);
-	*p += r;
+	r = print_Number(c, p);
+	p += r;
+	/**p += r;*/
 }
