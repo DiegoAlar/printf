@@ -7,7 +7,7 @@
   */
 int _printf(const char *format, ...)
 {
-	int i = 0, k = 1, res = 0, len = 0;
+	int i = 0, k = 0, res = 0, len = 0;
 	int *ptr;
 	int *subs;
 	va_list toPrint;
@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			if (!res)
 			{
 				va_end(toPrint);
-				return (-1);
+				return (i);
 			}
 			i += res;
 			continue;
