@@ -1,45 +1,52 @@
-.\" Manpage for _printf.
-.\" Contact 1166@holbertonschool.com or 1153@holbertonschool.com to correct errors or typos.
-.TH man "29 Oct 2019" "1.0"
+.TH _PRINTF 3 "29 Oct 2019" "version 1.0"
 .SH NAME _printf
 This function prints formatted strings, characters and numbers, and string literals. According to a format indicated by the user. At the end, it returns the length og the characters printed.
 .SH SYNOPSIS
 This function takes nth arguments to print them through the standard output. The input arguments can be single characters, literal strings, integer or decimal numbers with their respective format. The permitted formats are: %s, %c, %i and %d. As first argument, the function receives a string that may contain one or more of the formats previosly mentioned if requiered.
+.PP
 %s: use it for strings.
-%c: use i use it for decimal numbers (base 10)
-%i: .SH DESCRIPTION
-The function works as it follows:
-By declari2ng the function _printf, the user has to type as first parameter a string like this: "hello, %s\n". Then, as second parameter it must be ralated to the format specified by the letter typed after the percentage sign (%). This will apply for nth arguments you add to the function.
-.SH EXAMPLES
-_printf("this is a sentence without any format");
-Output: this is a sentence without a format
-_printf("Hello I'm Joseph and I'm %d years old", 30)
-Output: Hello I'm Joseph and I'm 30 years old
-_printf("I'm the last letter of the alphabet: %c", 'z')
-Output: I'm the last letter of the alphabet: z
-.SH SEE ALSO
-putchar, puts and printf
-.SH BUGS
-List known bugs.
-.SH AUTHOR
-Specify your contact information.
-.SH COPYRIGHT
-
-Specify your copyright information.
-.\" Manpage for nuseradd.
-.\" Contact vivek@nixcraft.net.in to correct errors or typos.
-.TH man 8 "06 May 2010" "1.0" "nuseradd man page"
-.SH NAME
-_printf
-.SH SYNOPSIS
-nuseradd [USERNAME]
+.PP
+%c: use it use it for decimal numbers (base 10)
+.PP
+%i: use it use it for integer numbers
+.PP
 .SH DESCRIPTION
-nuseradd is high level shell program for adding users to LDAP server.  On Debian, administrators should usually use nuseradd.debian(8) instead.
-.SH OPTIONS
-The nuseradd does not take any options. However, you can supply username.
+.PP
+The function works as it follows:
+.PP
+By declaring the function _printf, the user has to type as first parameter a string like this: "hello, %s\n". Then, as second parameter it must be ralated to the format specified by the letter typed after the percentage sign (%). This will apply for nth arguments you add to the function.\n
+.PP
+.SH EXAMPLES
+.PP
+_printf("this is a sentence without any format");
+.PP
+Output: this is a sentence without a format
+.PP
+_printf("Hello I'm Joseph and I'm %d years old", 30)
+.PP
+Output: Hello I'm Joseph and I'm 30 years old
+.PP
+_printf("I'm the last letter of the alphabet: %c", 'z')
+.PP
+Output: I'm the last letter of the alphabet: z
+.PP
 .SH SEE ALSO
-useradd(8), passwd(5), nuseradd.debian(8)
-	.SH BUGS
-	No known bugs.
-	.SH AUTHOR
-	Vivek Gite (vivek@nixcraft.net.in)
+.PP
+putchar, puts and printf
+.PP
+.SH BUGS
+.PP
+List known bugs.
+.PP
+.SH AUTHOR
+.PP
+Diego alarcon 1153@holbertonschool.com Jose Luis DIaz 1166@holbertonschool.com
+.PP
+.SH COPYRIGHT
+.PP
+GNU lesser general public license v2.1
+.PP
+.SH RETURN VALUE
+.PP
+the return value is the length of string printer for the function or in ERROR case is -1.
+.PP
