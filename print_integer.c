@@ -2,6 +2,7 @@
 /**
   * print_Number - prints a decimal and integer
   * @n: number to be printed
+  * @p: pointer to determine length
   * Return: number of digits of n
   *
   */
