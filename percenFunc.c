@@ -23,6 +23,11 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 	{
 		return (-1); /* add for case satiago*/
 	}
+	if (format[i + 1] == 'K' || format[i + 1] == '!')
+	{
+		_putchar(format[i], pun);
+		return (1);
+	}
 	if (format[i + 1] == '%')
 	{
 		_putchar('%', pun);
