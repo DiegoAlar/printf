@@ -12,6 +12,10 @@ int _printf(const char *format, ...)
 	int *subs;
 	va_list toPrint;
 
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	ptr = &len;
 	subs = &k;
 	va_start(toPrint, format);
