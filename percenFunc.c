@@ -22,7 +22,7 @@ int funper(const char *format, int i, va_list toPrint, int *pun, int *sub)
 	if (format[i + 1] == '%')
 	{
 		_putchar('%');
-		*sub += 1;
+		*sub += 2;
 		return (2);
 	}
 	while (c < 2)
