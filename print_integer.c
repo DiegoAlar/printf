@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
-  * print_number - prints a decimal and integer
+  * print_Number - prints a decimal and integer
   * @n: number to be printed
   * Return: number of digits of n
   *
   */
-int print_number(int n)
+int print_Number(int n)
 {
 	unsigned int new = n;
 	int cont;
@@ -18,7 +18,7 @@ int print_number(int n)
 	}
 	if (new / 10)
 	{
-		print_number(new / 10);
+		print_Number(new / 10);
 	}
 	_putchar((new % 10) + '0');
 	while (new > 10)
