@@ -19,10 +19,13 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 		{'d', printDec		}
 	};
 
+	if (format[i + 1] == '\0')
+	{
+		return (-1); /* add for case satiago*/
+	}
 	if (format[i + 1] == '%')
 	{
 		_putchar('%', pun);
-		/**sub += 2;*/
 		return (2);
 	}
 	while (c < 4)

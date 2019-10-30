@@ -23,6 +23,10 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			res = funper(format, i, toPrint, ptr);
+			if (res == -1)
+			{
+				return(-1); /* add for case satiago*/
+			}
 			if (!res)
 			{
 				va_end(toPrint);
@@ -38,19 +42,6 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	/*k = ((k / 2) - 1);*/
 	va_end(toPrint);
-	/*
-	if (k > 2)
-	{
-		if (k % 2 != 0)
-		{
-			k++;
-		}
-		k = (k / 2) - 1;
-		return ((i - 1) + len - k);
-
-	}
-	return ((i - 1) + len);*/
 	return (len);
 }
