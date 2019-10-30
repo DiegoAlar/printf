@@ -22,5 +22,5 @@ void printInt(va_list va, int *p);
 void printDec(va_list va, int *p);
 int funper(const char *format, int i, va_list toPrint, int *pun, int *sub);
 void funback(char *format, int i);
-int print_number(int n);
+int print_Number(int n);
 #endif
