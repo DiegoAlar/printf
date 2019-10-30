@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			res = funper(format, i, toPrint, ptr);
 			if (res == -1)
 			{
-				return(-1); /* add for case satiago*/
+				return (-1); /* add for case satiago*/
 			}
 			if (!res)
 			{
