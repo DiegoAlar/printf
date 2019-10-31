@@ -20,7 +20,8 @@ void printChar(va_list va, int *p);
 void printString(va_list va, int *p);
 void printInt(va_list va, int *p);
 void printDec(va_list va, int *p);
+void printBin(va_list va, int *p);
 int funper(const char *format, int i, va_list toPrint, int *pun);
 int print_Number(int n, int *p);
-int printbinary(int num, int *pu);
+int printBinary(int num, int *pu);
 #endif

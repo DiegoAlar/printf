@@ -32,7 +32,7 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 		_putchar('%', pun);
 		return (2);
 	}
-	while (c < 4)
+	while (c < 5)
 	{
 		if (relFormatFun[c].t == format[i + 1])
 		{
