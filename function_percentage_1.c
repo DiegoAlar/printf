@@ -75,7 +75,19 @@ void printDec(va_list va, int *p)
 	r = print_Number(c, p);
 	p += r;
 }
+/**
+  * printBin - function that prints a binary
+  * @va: list with the integer number
+  * @p: pointer to length in _printf
+  *
+  */
+void printBin(va_list va, int *p)
+{
+	int num = va_arg(va, int);
 
+	_putchar(((printBinary(num, p) % 2) + 48), p);
+
+}
 
 
 

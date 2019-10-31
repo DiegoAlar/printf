@@ -16,7 +16,8 @@ int funper(const char *format, int i, va_list toPrint, int *pun)
 		{'c', printChar		},
 		{'s', printString	},
 		{'i', printInt		},
-		{'d', printDec		}
+		{'d', printDec		},
+		{'b', printBin		}
 	};
 
 	if (format[i + 1] == '\0')
